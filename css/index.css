@@ -1,0 +1,148 @@
+* {
+  box-sizing: border-box;
+}
+
+body{
+  background-color: rgb(141, 236, 120);
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  font-size: small;
+}
+/*mobile first view*/
+
+header{
+  background-color: aquamarine;
+  overflow: hidden;
+}
+h1{
+  color: black;
+  float: left;
+  padding: 0 20px;
+  text-align: center;
+  width: 100%;
+}
+#hamburger_checkbox{
+display: none;
+}
+#hamburger_image{
+display: block;
+margin-top: 20px;
+margin-left: auto;
+margin-right: auto;
+padding: 10px;
+width: 10%;
+}
+/*show or hide the menu*/
+#hamburger_checkbox:not(:checked) + nav {
+  display: none;
+}
+
+nav a {
+  color: rgb(6, 6, 6);
+  float: left;
+  font-size: 17px;
+  padding: 5px;
+  text-align: center;
+  text-decoration: none;
+  width: 100%;
+}
+/*invert colors on mouse hover*/
+nav a:hover{
+  background-color: white;
+  color: black;
+}
+
+/*invert colors on tab key focus*/
+nav a:focus {
+  background-color: white;
+  color: black;
+  outline: none;
+}
+
+/*hilight the current link*/
+.active_nav{
+  background-color: rgb(63, 76, 84);
+  color: white;
+}
+#background image{
+  padding: 20px;
+  background-color: #2a6592;
+  
+}
+
+
+#background {
+  padding: 10px;
+  width: 100%;
+  margin-top: 0;
+  margin-left: auto;
+  margin-right: auto;
+}
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+main{
+  display: flex;
+}
+aside{
+  align-items: center;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  display: flex;
+  flex-direction: column;
+  float: left;
+  justify-content: center;
+  width: 100%;
+}
+/*style the links in the aside section*/
+aside a{
+  color: rgb(14, 13, 12);
+  display: block;
+  padding: 5px 0;
+  text-decoration: none;
+  width: 100%;
+}
+aside a:hover{
+
+}
+
+
+section{
+  display: inline;
+  float: right;
+  width: 80%;
+}
+
+
+}
+
+
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px){
+  /* hide the hamburger menu*/
+  #hamburger_image {
+    display: none;
+  }
+  /*show the nav links*/
+  #hamburger_checkbox:not(:checked) + nav {
+    display: block;
+  }
+  h1 {
+    text-align: left;
+    width: 390px;
+  }
+  nav {
+    float: right;
+  }
+  nav a {
+    width: auto;
+  }
+
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+  .column{
+    max-width: 25%;
+  }
+}
